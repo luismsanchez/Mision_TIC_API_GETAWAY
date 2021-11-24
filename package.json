@@ -4,7 +4,7 @@
     "description": "Conection with bank microservices",
     "main": "src/index",
     "scripts": {},
-    "author": "",
+    "author": "Luis Miguel Sánchez Ramírez",
     "license": "ISC",
     "dependencies": {
         "apollo-datasource-rest": "^3.1.1",
