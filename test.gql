@@ -1,0 +1,50 @@
+# This is a User
+type User{
+    id: ID!
+    username: String!
+    age: Int
+    height: Float
+    is_active:Boolean
+}
+
+# This is a Continent
+type Continent{
+    name: String
+    population: Int
+    number_countries: Int
+    avg_population: Float
+}
+
+# This is a City
+type City{
+    name: String
+    population: Int
+}
+
+# Mi apigetaway trabaja con paises
+type Country{
+    name: String
+    capital: City
+    population: Int
+    PIB: Float
+    continent: Continent
+    cuidades: [City]
+    flag: String
+}
+
+# Queries
+type Query{
+    getAllUsers: [User]
+    getCityByName(name: String!): City
+    getUserByID(id: ID!): User
+    getCountryByCity(city: City!): [Country]
+    numberOfCities: Int
+    getCountriesWithPopulationGreaterThanN(n: Int): [Country]
+}
+
+# Mutations
+type Mutation{
+    createCity(name: String, population: Int): City
+    updateAgeUser(id: ID!, age: Int): User
+    deleteAllCountries(countries:[Country]): Boolean
+}
