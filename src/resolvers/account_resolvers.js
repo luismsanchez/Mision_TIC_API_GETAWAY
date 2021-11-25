@@ -1,4 +1,4 @@
-const accountResolvers = {
+const accountResolver = {
     Query: {
         accountByUsername: async (_, { username }, {dataSources}) => {
             return await dataSources.accountApi.accountByUsernameRequest(username);
@@ -9,4 +9,4 @@ const accountResolvers = {
     }
 };
 
-module.exports = accountResolvers;
+module.exports = accountResolver;
