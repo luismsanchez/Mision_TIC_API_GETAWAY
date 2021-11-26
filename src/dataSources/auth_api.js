@@ -10,6 +10,11 @@ class AuthAPI extends RESTDataSource{
     async loginRequest(credentials){
         return await this.post('/rest-auth/login/', credentials)
     }
+
+    async createUser(userData){
+        return await this.post('/rest-auth/registration/', userData)
+    }
+
 }
 
 module.exports = AuthAPI;
