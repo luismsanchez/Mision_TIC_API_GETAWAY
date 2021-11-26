@@ -11,7 +11,7 @@ const authTypeDefs = gql `
     }
 
     type Mutation {
-        login(credentials: LoginInput!): Token!
+        loginRequest(credentials: LoginInput!): Token!
     }
 `;
 
